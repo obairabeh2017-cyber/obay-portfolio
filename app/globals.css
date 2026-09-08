@@ -1,0 +1,165 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #f3e9d2;
+  --foreground: #2b2118;
+  --card: #f6efdd;
+  --card-foreground: #2b2118;
+  --popover: #f6efdd;
+  --popover-foreground: #2b2118;
+  --primary: #a41a21;
+  --primary-foreground: #f3e9d2;
+  --secondary: #f2c14e;
+  --secondary-foreground: #2b2118;
+  --muted: #eadfc3;
+  --muted-foreground: #7a6a55;
+  --accent: #7a1a1e;
+  --accent-foreground: #f3e9d2;
+  --destructive: #7a1a1e;
+  --destructive-foreground: #f3e9d2;
+  --border: #2b2118;
+  --input: #2b2118;
+  --ring: #a41a21;
+  --radius: 0.375rem;
+  --cream: #f3e9d2;
+  --paper: #f6efdd;
+  --crimson: #a41a21;
+  --maroon: #7a1a1e;
+  --sun: #f2c14e;
+  --ink: #2b2118;
+}
+
+@theme inline {
+  --font-display: var(--font-anton), var(--font-arabic), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-oswald), var(--font-arabic), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-oswald), ui-serif, Georgia, serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-cream: var(--cream);
+  --color-paper: var(--paper);
+  --color-crimson: var(--crimson);
+  --color-maroon: var(--maroon);
+  --color-sun: var(--sun);
+  --color-ink: var(--ink);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Force Lalezar for the whole Arabic (RTL) version - keep OUTSIDE layers
+   so it beats the Tailwind font utilities. */
+[dir="rtl"],
+[dir="rtl"] * {
+  font-family: var(--font-arabic), ui-sans-serif, system-ui, sans-serif !important;
+}
+
+/* ===== vintage utilities ===== */
+
+/* paper grain overlays the whole page */
+.paper-grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  pointer-events: none;
+  opacity: 0.35;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+}
+
+/* halftone dot texture */
+.halftone {
+  background-image: radial-gradient(rgba(43, 33, 24, 0.16) 1px, transparent 1.5px);
+  background-size: 7px 7px;
+}
+.halftone-soft {
+  background-image: radial-gradient(rgba(43, 33, 24, 0.1) 1px, transparent 1.6px);
+  background-size: 9px 9px;
+}
+
+/* printed offset shadow, no blur */
+.print-shadow {
+  box-shadow: 5px 5px 0 0 var(--ink);
+}
+.print-shadow-sm {
+  box-shadow: 3px 3px 0 0 var(--ink);
+}
+.print-shadow-maroon {
+  box-shadow: 5px 5px 0 0 var(--maroon);
+}
+
+/* solid print border */
+.print-outline {
+  border: 2px solid var(--ink);
+}
+
+/* outlined display text (transparent fill, stroked letter) */
+.text-stroke {
+  color: transparent;
+  -webkit-text-stroke: 2px currentColor;
+}
+.text-stroke-thin {
+  color: transparent;
+  -webkit-text-stroke: 1.5px currentColor;
+}
+
+/* misregistration chromatic double-print */
+.misprint {
+  text-shadow: 3px 2px 0 rgba(242, 193, 78, 0.65), -2px -1px 0 rgba(164, 26, 33, 0.4);
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+/* Custom scrollbar in ink */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--ink);
+  border: 2px solid var(--cream);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--crimson);
+}
