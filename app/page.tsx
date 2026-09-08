@@ -214,11 +214,11 @@ export default function Portfolio() {
           <CornerMarks />
 
           {/* left sunflower */}
-          <div className="pointer-events-none absolute left-0 top-1/2 -translate-y-1/2 -translate-x-[38%] w-[76vw] max-w-[900px] opacity-95 select-none">
+          <div className="mobile-flower pointer-events-none absolute left-0 top-[42%] -translate-y-1/2 -translate-x-[48%] w-[48vw] max-w-[900px] opacity-75 blur-[1.5px] select-none md:top-1/2 md:-translate-x-[38%] md:w-[76vw] md:opacity-95 md:blur-0">
             <Sunflower className="w-full h-full" tilt={-16} />
           </div>
           {/* right sunflower */}
-          <div className="pointer-events-none absolute right-0 top-[45%] -translate-y-1/2 translate-x-[38%] w-[62vw] max-w-[720px] opacity-90 select-none">
+          <div className="mobile-flower pointer-events-none absolute right-0 top-[54%] -translate-y-1/2 translate-x-[48%] w-[40vw] max-w-[720px] opacity-70 blur-[2px] select-none md:top-[45%] md:translate-x-[38%] md:w-[62vw] md:opacity-90 md:blur-0">
             <Sunflower className="w-full h-full" tilt={20} flip />
           </div>
 
@@ -243,7 +243,7 @@ export default function Portfolio() {
             <div className="absolute right-0 top-[58%] h-2 w-28 bg-maroon" />
           </div>
 
-          <div className="relative z-10 mx-auto max-w-7xl px-6 pt-24 pb-28 md:pt-32 md:pb-36 flex flex-col items-center text-center">
+          <div className="relative z-10 mx-auto max-w-7xl px-5 pt-20 pb-24 sm:px-6 md:pt-32 md:pb-36 flex flex-col items-center text-center">
             <p className="flex items-center gap-3 text-xs md:text-sm font-semibold uppercase tracking-[0.4em] text-maroon">
               <WavyLine className="w-12 text-crimson" />
               {content.hero.kicker}
@@ -437,10 +437,10 @@ export default function Portfolio() {
         {/* ======= CONTACT ======= */}
         <section id="contact" className="relative overflow-hidden py-24 md:py-32 px-6">
           <CornerMarks />
-          <div className="pointer-events-none absolute -right-16 -top-16 w-[42vw] max-w-[520px] opacity-80 select-none" aria-hidden>
+          <div className="mobile-flower pointer-events-none absolute -right-10 -top-8 w-[30vw] max-w-[520px] opacity-60 blur-[1.5px] select-none md:-right-16 md:-top-16 md:w-[42vw] md:opacity-80 md:blur-0" aria-hidden>
             <Sunflower className="w-full h-full" tilt={-24} />
           </div>
-          <div className="pointer-events-none absolute -left-10 -bottom-20 w-[30vw] max-w-[380px] opacity-60 select-none" aria-hidden>
+          <div className="mobile-flower pointer-events-none absolute -left-8 -bottom-12 w-[22vw] max-w-[380px] opacity-45 blur-[2px] select-none md:-left-10 md:-bottom-20 md:w-[30vw] md:opacity-60 md:blur-0" aria-hidden>
             <Sunflower className="w-full h-full" tilt={30} flip />
           </div>
 
