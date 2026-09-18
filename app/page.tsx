@@ -108,7 +108,7 @@ export default function Portfolio() {
         title: "The man behind the cut",
         desc: "I deliver the quality you aspire for in your videos, in the shortest time possible.",
         skills: ["Video Editing", "Motion Graphics", "Color Grading"],
-        tag: "Since forever, before the ink dried.",
+        tag: "damn, this guy is so me",
       },
       clients: { label: "Clients", title: "WORKED WITH GREAT NAMES" },
       contact: {
@@ -120,31 +120,31 @@ export default function Portfolio() {
       footer: { rights: "All rights reserved.", made: "Printed with love" },
     },
     ar: {
-      nav: { home: "الرئيسية", about: "عني", work: "أعمالي", clients: "العملاء", contact: "تواصل" },
+      nav: { home: "البداية", about: "من أنا", work: "أعمالي", clients: "عملائي", contact: "تواصل معي" },
       hero: {
-        kicker: "مونتاج فريلانس",
-        title: ["أُبي", "المحرر"],
-        subtitle: "ممنتج فيديو و مصمم موشن",
-        cta: "شاهد أعمالي",
+        kicker: "محرر فيديو مستقل",
+        title: ["أُبي", "أصنع", "الفرق"],
+        subtitle: "محرر فيديو ومصمم موشن جرافيك",
+        cta: "اكتشف أعمالي",
         handle: "@ob4yy",
       },
-      marquee: ["مونتاج فيديو", "موشن جرافيك", "تصحيح ألوان", "تصميم صوت", "ما بعد الإنتاج"],
-      work: { label: "أعمال مختارة", title: "أحدث الأعمال" },
+      marquee: ["تحرير الفيديو", "الموشن جرافيك", "معالجة الألوان", "تصميم الصوت", "اللمسات النهائية"],
+      work: { label: "نماذج من أعمالي", title: "أحدث المشاريع" },
       about: {
-        label: "عني",
-        title: "الرجل اللي ورا القص",
-        desc: "اقدر اعطيك الجودة الي تطمح لها في فيديوهاتك في اقصر مدة ممكنة",
-        skills: ["مونتاج فيديو", "موشن جرافيك", "تصحيح ألوان"],
-        tag: "من زمان، قبل ما يجف الحبر.",
+        label: "من أنا",
+        title: "أحوّل الفكرة إلى مشهد لا يُنسى",
+        desc: "أصنع فيديوهات تحمل إحساس فكرتك، بإيقاع جذاب وتفاصيل تترك أثرًا واضحًا.",
+        skills: ["تحرير الفيديو", "الموشن جرافيك", "معالجة الألوان"],
+        tag: "يخي الوسيم هذا يمثلني",
       },
-      clients: { label: "العملاء", title: "عملت مع أسماء رائعة" },
+      clients: { label: "عملائي", title: "تشرفت بالعمل مع علامات مميزة" },
       contact: {
-        title: "خلّنا نصنع",
-        title2: "شيء رائع",
-        desc: "عندك مشروع بالبال؟ احكيني عنه.",
-        cta: "ابدأ المشروع",
+        title: "لنجعل فكرتك",
+        title2: "تستحق المشاهدة",
+        desc: "لديك فكرة تستحق أن تُروى؟ أخبرني عنها.",
+        cta: "لنبدأ مشروعك",
       },
-      footer: { rights: "جميع الحقوق محفوظة.", made: "مطبوعة بحب" },
+      footer: { rights: "جميع الحقوق محفوظة.", made: "صُنع بشغف" },
     },
   }
 
@@ -371,7 +371,7 @@ export default function Portfolio() {
                   <span className="font-display uppercase tracking-widest text-xs">Obay</span>
                   <StarMark className="w-3.5 h-3.5" />
                 </div>
-                <img src="/obay-coffee-drawing.png" alt="Obay drinking coffee" className="w-full object-contain mix-blend-multiply" />
+                <img src="/obay-coffee-drawing.png" alt="Illustrated portrait of Obay" className="w-full object-contain mix-blend-multiply" />
                 <p className="border-t-2 border-ink px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em]">
                   {content.about.tag}
                 </p>
