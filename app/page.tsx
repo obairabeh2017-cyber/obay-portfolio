@@ -371,7 +371,7 @@ export default function Portfolio() {
                   <span className="font-display uppercase tracking-widest text-xs">Obay</span>
                   <StarMark className="w-3.5 h-3.5" />
                 </div>
-                <img src="/obay-coffee-drawing.png" alt="Obay drinking coffee" className="w-full object-contain mix-blend-multiply" />
+                <img src="/obay-coffee-drawing.png" alt="Illustrated portrait of Obay" className="w-full object-contain mix-blend-multiply" />
                 <p className="border-t-2 border-ink px-4 py-2 text-xs font-semibold uppercase tracking-[0.3em]">
                   {content.about.tag}
                 </p>
