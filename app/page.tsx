@@ -108,7 +108,7 @@ export default function Portfolio() {
         title: "The man behind the cut",
         desc: "I deliver the quality you aspire for in your videos, in the shortest time possible.",
         skills: ["Video Editing", "Motion Graphics", "Color Grading"],
-        tag: "Since forever, before the ink dried.",
+        tag: "damn, this guy is so me",
       },
       clients: { label: "Clients", title: "WORKED WITH GREAT NAMES" },
       contact: {
